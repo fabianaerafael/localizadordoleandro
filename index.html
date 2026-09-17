@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08111f" />
+  <title>Onde está Leandro Henriques?</title>
+  <meta name="description" content="Central absolutamente não oficial de monitoramento europeu de Leandro Henriques." />
+
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://tile.openstreetmap.org" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanline"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <div>
+        <div class="eyebrow">CENTRAL DE MONITORAMENTO INTERNACIONAL</div>
+        <h1>Onde está Leandro Henriques?</h1>
+      </div>
+    </div>
+    <div class="live-badge"><span></span> MONITORAMENTO ATIVO</div>
+  </header>
+
+  <main class="dashboard">
+    <section class="map-panel panel">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">POSIÇÃO ATUAL</div>
+          <h2 id="location-title">Farol da Nazaré — Nazaré, Portugal</h2>
+        </div>
+        <div class="updated">Atualizado <strong id="updated-time">agora</strong></div>
+      </div>
+      <div id="map"></div>
+      <div class="map-overlay top-left">GPS MOCK // EUROPE-01</div>
+      <div class="map-overlay bottom-right">PRECISÃO: <strong>ABSURDAMENTE SUSPEITA</strong></div>
+    </section>
+
+    <aside class="sidebar">
+      <section class="profile-card panel">
+        <div class="profile-top">
+          <div class="avatar-wrap">
+            <img src="assets/leandro.png" alt="Leandro Henriques" class="avatar" />
+            <span class="pulse-ring"></span>
+          </div>
+          <div>
+            <div class="eyebrow">ALVO LOCALIZADO</div>
+            <h2>Leandro Henriques</h2>
+            <div class="sub">Operando em território europeu</div>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="status-label">STATUS ATUAL</div>
+          <div id="status-text" class="status-text">Fingindo que sabe onde está.</div>
+          <div class="status-loader"><span></span></div>
+        </div>
+      </section>
+
+      <section class="metrics panel">
+        <div class="panel-head compact">
+          <div>
+            <div class="eyebrow">TELEMETRIA NÃO CONFIÁVEL</div>
+            <h3>Indicadores críticos</h3>
+          </div>
+        </div>
+
+        <div class="metric-row">
+          <span>🍺 Nível etílico</span>
+          <strong id="metric-alcool">Em análise</strong>
+        </div>
+        <div class="metric-row">
+          <span>💶 Euros restantes</span>
+          <strong id="metric-euros">Informação sigilosa</strong>
+        </div>
+        <div class="metric-row">
+          <span>🧳 Risco de perder a mala</span>
+          <strong id="metric-mala">37%</strong>
+        </div>
+        <div class="metric-row">
+          <span>❤️ Romance europeu</span>
+          <strong id="metric-romance">12%</strong>
+        </div>
+        <div class="metric-row">
+          <span>🚨 Interpol</span>
+          <strong id="metric-interpol">Sem interesse</strong>
+        </div>
+      </section>
+
+      <section class="history panel">
+        <div class="panel-head compact">
+          <div>
+            <div class="eyebrow">HISTÓRICO DE MOVIMENTAÇÃO</div>
+            <h3>Últimos avistamentos</h3>
+          </div>
+        </div>
+        <div id="history-list" class="history-list"></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <span>Projeto satírico. Nenhum GPS real foi ferido durante este monitoramento.</span>
+    <span class="footer-code">LH-EUROTRACK // v1.0</span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
